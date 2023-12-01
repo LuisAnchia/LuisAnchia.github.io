@@ -12,11 +12,13 @@ h1 {
   font-size: 22px;
   color: white;
   font-weight: 900;
+  position: relative;
+  top: -14px;
 }
 
 p {
   text-align: center;
-  margin-top: -13px;
+  margin-top: -29px;
   color: white;
 }
 
