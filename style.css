@@ -1,8 +1,23 @@
+:root
+
 body {
   background: linear-gradient(to bottom right, #8A2BE2, #00CED1);
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
+}
+
+h1 {
+  text-align: center;
+  font-size: 22px;
+  color: white;
+  font-weight: 900;
+}
+
+p {
+  text-align: center;
+  margin-top: -13px;
+  color: white;
 }
 
 .container {
@@ -52,5 +67,6 @@ body {
     width: 90vw;
     height: 70vh;
     font-size: 16px;
+    margin-top: -98px;
   }
 }
