@@ -1,5 +1,3 @@
-// config.js
-
 const challenges = [
     "Haz un gemido sexual o toma 5 shoots",
     "Haz un perreo o toma 4 shoots",

@@ -1,6 +1,6 @@
 // main.js
 
-import challenges from './config.js';
+import challenges from './js/retos.js';
 
 const cardContainer = document.getElementById("card-container");
 const shuffleBtn = document.getElementById("shuffle-btn");
