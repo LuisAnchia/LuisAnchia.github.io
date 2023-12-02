@@ -4,20 +4,16 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./public/style.css">
   <title>Reto o que?</title>
-  <link rel="stylesheet" type="text/css" href="./public/style.css">
 </head>
 <body>
-  <h1 class="">Sinpe Donación</h1>
-  <P>62755132</P>
-  <div class="container">
-    <div id="card-container" class="card"></div>
-    <div class="btn-container">
-      <button id="shuffle-btn" class="btn">Mezclar cartas</button>
-      <button id="draw-btn" class="btn">Sacar carta</button>
-      <!--<button id="save-btn" class="btn">Guardar cartas</button>-->
-    </div>
-  </div>
-	<script type="module" src="main.js" defer></script>
+  <h1>Bienvenidos</h1>
+  <button id="irAIndex">Juego</button>
+  <script>
+    document.getElementById("irAIndex").addEventListener("click", function() {
+      window.location.href = "game.html";
+    });
+  </script>
 </body>
 </html>
