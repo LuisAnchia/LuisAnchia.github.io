@@ -6,66 +6,71 @@ const cardContainer = document.getElementById("card-container");
 const shuffleBtn = document.getElementById("shuffle-btn");
 const drawBtn = document.getElementById("draw-btn");
 const saveBtn = document.getElementById("save-btn");
+const backHomeBtn = document.getElementById("backHome-btn");
 
 let shuffledCards = [];
 
 function initialize() {
-  shuffledCards = shuffle([...challenges]);
-  addEventListeners();
-  resetGame();
+    shuffledCards = shuffle([...challenges]);
+    addEventListeners();
+    resetGame();
 }
 
 function shuffle(array) {
-  let currentIndex = array.length;
-  let temporaryValue, randomIndex;
+    let currentIndex = array.length;
+    let temporaryValue, randomIndex;
 
-  while (currentIndex !== 0) {
-      randomIndex = Math.floor(Math.random() * currentIndex);
-      currentIndex -= 1;
-      temporaryValue = array[currentIndex];
-      array[currentIndex] = array[randomIndex];
-      array[randomIndex] = temporaryValue;
-  }
+    while (currentIndex !== 0) {
+        randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex -= 1;
+        temporaryValue = array[currentIndex];
+        array[currentIndex] = array[randomIndex];
+        array[randomIndex] = temporaryValue;
+    }
 
-  return array;
+    return array;
 }
 
 function drawCard() {
-  if (shuffledCards.length === 0) {
-    cardContainer.innerHTML = "Se han acabado las cartas.";
-    drawBtn.disabled = true;
-    return;
-  }
+    if (shuffledCards.length === 0) {
+        cardContainer.innerHTML = "Se han acabado las cartas.";
+        drawBtn.disabled = true;
+        return;
+    }
 
-  let card = shuffledCards.pop();
-  cardContainer.innerHTML = card;
+    let card = shuffledCards.pop();
+    cardContainer.innerHTML = card;
 }
 
 function saveCards() {
-  if (shuffledCards.length === challenges.length) {
-    alert("¡No has sacado ninguna carta!");
-    return;
-  }
+    if (shuffledCards.length === challenges.length) {
+        alert("¡No has sacado ninguna carta!");
+        return;
+    }
 
-  localStorage.setItem("drawnCards", JSON.stringify(shuffledCards));
-  alert(`¡Se han guardado ${challenges.length - shuffledCards.length} cartas!`);
-  resetGame();
+    localStorage.setItem("drawnCards", JSON.stringify(shuffledCards));
+    alert(`¡Se han guardado ${challenges.length - shuffledCards.length} cartas!`);
+    resetGame();
 }
 
 function resetGame() {
-  shuffledCards = shuffle([...challenges]);
-  drawBtn.disabled = false;
-  cardContainer.innerHTML = "Presiona el botón 'Sacar carta' para empezar.";
+    shuffledCards = shuffle([...challenges]);
+    drawBtn.disabled = false;
+    cardContainer.innerHTML = "Presiona el botón 'Sacar carta' para empezar.";
 }
 
 function addEventListeners() {
-  shuffleBtn.addEventListener("click", resetGame);
-  drawBtn.addEventListener("click", drawCard);
-  saveBtn.addEventListener("click", saveCards);
+    shuffleBtn.addEventListener("click", resetGame);
+    drawBtn.addEventListener("click", drawCard);
+    saveBtn.addEventListener("click", saveCards);
+
+    // Asegurarse de que el botón 'backHome-btn' existe antes de agregar el event listener
+    if (backHomeBtn) {
+        backHomeBtn.addEventListener('click', function() {
+            // Redirecciona a la página de inicio (ajusta la URL según tu estructura de carpeta)
+            window.location.href = 'index.html';
+        });
+    }
 }
 
 initialize();
-
-document.getElementById('backHome-btn').addEventListener('click', function() {
-  window.location.href = 'index.html';
-});
