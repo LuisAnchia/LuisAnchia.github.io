@@ -203,8 +203,11 @@ button.glow-on-hover {
 }
 
 .homeSvg{
+  height: 30px;
+}
+
+button#backHome-btn {
   display: flex;
-  flex-direction: column;
-  padding: 6px 30px;
-  height: 42px;
+  align-items: flex-end;
+  gap: 2%;
 }

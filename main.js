@@ -65,3 +65,7 @@ function addEventListeners() {
 }
 
 initialize();
+
+document.getElementById('backHome-btn').addEventListener('click', function() {
+  window.location.href = 'index.html';
+});
