@@ -44,7 +44,7 @@ p {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 105vh;
+  height: 100vh;
 }
 
 .card {
@@ -106,7 +106,7 @@ p {
     width: 90vw;
     height: 70vh;
     font-size: 16px;
-    margin-top: -98px;
+    margin-top: 0px;
   }
 }
 
