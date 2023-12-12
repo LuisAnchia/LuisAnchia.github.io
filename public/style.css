@@ -1,5 +1,3 @@
-:root
-
 body {
   background: linear-gradient(to bottom right, #8A2BE2, #00CED1);
   margin: 0;
@@ -7,7 +5,7 @@ body {
   font-family: Arial, sans-serif;
 }
 
-.bodyFront{
+.bodyFront {
   background: #8A2BE2 !important;
 }
 
@@ -17,7 +15,7 @@ h1 {
   color: white;
   font-weight: 900;
   position: relative;
-  top: -14px;
+  top: 0px;
 }
 
 p {
@@ -26,12 +24,19 @@ p {
   color: white;
 }
 
-/* CSS */
-.P_Front {
+.paragraph-container {
+  border: 2px solid #40E0D0;
+  border-radius: 10px;
+  padding: 15px;
   text-align: center;
+  background-color: #00000080;
+  margin: 20px;
+}
+
+.P_Front {
   color: white;
-  margin-top: -15px;
-  line-height: 1.5; /* Ajusta según sea necesario para separar las líneas */
+  margin: 0;
+  line-height: 1.5;
 }
 
 .container {
@@ -76,7 +81,7 @@ p {
   cursor: pointer;
 }
 
-.btn_principal {
+.btn_RetoFrontPage {
   margin: 10px;
   padding: 10px;
   border: none;
@@ -88,11 +93,109 @@ p {
   cursor: pointer;
 }
 
+@media only screen and (max-width: 767px) {
+  .btn_RetoFrontPage {
+    display: block;
+    margin: 10px auto;
+    text-align: center;
+  }
+}
+
 @media only screen and (max-width: 600px) {
   .card {
     width: 90vw;
     height: 70vh;
     font-size: 16px;
     margin-top: -98px;
+  }
+}
+
+.glow-on-hover {
+  width: 220px;
+  height: 50px;
+  border: none;
+  outline: none;
+  color: #fff;
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+}
+
+.glow-on-hover:before {
+  content: '';
+  background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
+  border-radius: 10px;
+}
+
+.glow-on-hover:active {
+  color: #000
+}
+
+.glow-on-hover:active:after {
+  background: transparent;
+}
+
+.glow-on-hover:hover:before {
+  opacity: 1;
+}
+
+.glow-on-hover:after {
+  z-index: -1;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #111;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+@keyframes glowing {
+  0% {
+    background-position: 0 0;
+  }
+
+  50% {
+    background-position: 400% 0;
+  }
+
+  100% {
+    background-position: 0 0;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .glow-on-hover:after {
+    width: 80%;
+    height: 80%;
+    left: 10%;
+    top: 10%;
+  }
+}
+
+button.glow-on-hover {
+  margin-left: 77px;
+}
+
+@media only screen and (max-width: 767px) {
+  button.glow-on-hover {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    /* Asegura que el botón ocupe todo el ancho disponible */
   }
 }
