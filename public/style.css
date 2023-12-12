@@ -206,8 +206,10 @@ button.glow-on-hover {
   height: 30px;
 }
 
-button#backHome-btn {
+a.btn {
   display: flex;
   align-items: flex-end;
-  gap: 2%;
+  gap: 3%;
+  padding: 13px;
 }
+
