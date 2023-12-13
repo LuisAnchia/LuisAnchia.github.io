@@ -258,10 +258,9 @@ a.btn {
   text-decoration: none;
   font-family: var(--font);
   font-size: 1.25rem;
-  bottom: 22px;
   display: block;
-  width: 283px;
-  left: 36px;
+  margin: 31px;
+  bottom: 53px;
 }
 
 .button:before,
@@ -325,7 +324,7 @@ a.btn {
   grid-template-columns: repeat(3, 100px);
   grid-gap: 5px;
   position: relative;
-  bottom: 160px;
+  bottom: 130px;
 }
 
 .cell {
