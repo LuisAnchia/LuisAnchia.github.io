@@ -28,6 +28,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const handleCellClick = (index) => {
         if (!winner && !cells[index].classList.contains('occupied')) {
+            const marker = currentPlayer === 'red' ? 'X' : 'O';
+            cells[index].textContent = marker;
             cells[index].classList.add(currentPlayer, 'occupied');
             moves++;
 

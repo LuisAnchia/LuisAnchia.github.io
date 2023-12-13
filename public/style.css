@@ -258,7 +258,7 @@ a.btn {
   text-decoration: none;
   font-family: var(--font);
   font-size: 1.25rem;
-  left: 26%;
+  left: 24%;
   bottom: 22px;
 }
 
@@ -314,7 +314,7 @@ a.btn {
   margin: 0;
 } */
 
-.container {
+.containerTwo {
   text-align: center;
 }
 
@@ -322,6 +322,9 @@ a.btn {
   display: grid;
   grid-template-columns: repeat(3, 100px);
   grid-gap: 5px;
+  position: relative;
+  left: 11%;
+  top: 65px;
 }
 
 .cell {
@@ -339,5 +342,22 @@ a.btn {
 .message {
   margin-top: 20px;
   font-size: 1.5em;
+  font-weight: bold;
+  background-color: #a310a08a;
+  padding: 41px;
+  border-radius: 38px;
+  margin: 40px;
+  color: white;
+  position: relative;
+  top: 90px;
+}
+
+.cell.red {
+  color: red;
+  font-weight: bold;
+}
+
+.cell.blue {
+  color: blue;
   font-weight: bold;
 }
