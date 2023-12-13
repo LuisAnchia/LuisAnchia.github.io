@@ -250,9 +250,10 @@ a.btn {
   background: var(--colorBackgroundUrl);
   color: var(--color);
   font-weight: bold;
-  padding: 1.18em 1.32em 1.03em;
+  padding: 17px 118px;
+  border: none;
   line-height: 1;
-  border-radius: 2px;
+  border-radius: 0px;
   position: relative;
   min-width: 8.23em;
   text-decoration: none;
@@ -324,7 +325,7 @@ a.btn {
   grid-template-columns: repeat(3, 100px);
   grid-gap: 5px;
   position: relative;
-  bottom: 130px;
+  bottom: 110px;
 }
 
 .cell {
